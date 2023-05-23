@@ -1,4 +1,5 @@
 import http from 'http';
+import chalk from './mychalk/chalk.js';
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -10,6 +11,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(chunk(['1', '2', '3', '4', '5'], 2));
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(chalk.red(`Server running at http://${hostname}:${port}/`));
 });
