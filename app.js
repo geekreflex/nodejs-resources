@@ -1,4 +1,4 @@
-const http = require('http');
+import http from 'http';
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -10,5 +10,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
+  console.log(chunk(['1', '2', '3', '4', '5'], 2));
   console.log(`Server running at http://${hostname}:${port}/`);
 });
